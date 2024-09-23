@@ -72,6 +72,9 @@ add_dependencies(tf_distort ${PROJECT_NAME}_gencpp ${PROJECT_NAME}_gencfg)
 add_executable(testclient src/ViconDataStreamSDK_CPPTest.cpp)
 target_link_libraries(testclient vicon_sdk)
 
+add_executable(vicon2mavros_modify src/vicon2mavros_modify.cpp)
+target_link_libraries(vicon2mavros_modify ${catkin_LIBRARIES})
+
 # Install
 install(TARGETS vicon_sdk vicon_bridge calibrate tf_distort testclient
         ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
