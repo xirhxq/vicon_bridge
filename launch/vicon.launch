@@ -13,4 +13,6 @@
 		<param name="tf_ref_frame_id" value="$(arg vicon_world_frame)"/>
 	</node>
 
+  <node pkg="vicon_bridge" type="vicon2mavros.py" name="vicon2mavros" output="screen" />
+
 </launch>
