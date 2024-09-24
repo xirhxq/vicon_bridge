@@ -15,6 +15,8 @@ class Vicon2Mavros:
 
     def callback(self, msg: TransformStamped, i):
         pose = PoseStamped()
+
+        pose.header = msg.header
         
         pose.pose.position.x = msg.transform.translation.x
         pose.pose.position.y = msg.transform.translation.y
