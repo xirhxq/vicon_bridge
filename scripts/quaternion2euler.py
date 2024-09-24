@@ -13,5 +13,5 @@ def callback(msg: PoseStamped):
     print(f'Roll: {euler[0]:.2f}, Pitch: {euler[1]:.2f}, Yaw: {euler[2]:.2f}')
 
 rospy.init_node('quaternion2euler')
-rospy.Subscriber('/uav1/mavros/vision_pose/pose', PoseStamped, callback)
+rospy.Subscriber('/uav1/mavros/local_position/pose', PoseStamped, callback)
 rospy.spin()
